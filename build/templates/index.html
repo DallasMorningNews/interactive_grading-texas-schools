@@ -1,0 +1,186 @@
+{%extends 'base.html'%}
+{%import 'partials/img.html' as img%}
+
+
+{%block custom_meta%}
+<meta content="{{keywords|join(',')}}" name="keywords" />
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta content="{{shareText}}" name="description" />
+<title>{{pageTitle}}</title>
+<meta property="og:url" content="{{url}}" />
+<meta property="og:title" content="{{shareTitle}}"/>
+<meta property="og:description" content="{{shareText}}" name="description"/>
+<meta property="og:image" content="{{imgURL}}"/>
+<meta property="og:image:height" content="{{imgHeight}}"/>
+<meta property="og:image:width" content="{{imgWidth}}"/>
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{sectionTwitter}}" />
+<meta name="twitter:creator" content="@{{authorTwitter}}" />
+
+<meta name="liveFyreID" content="{{id}}" />
+
+<meta name="parsely-page" id='parsely-page' content='{"title": "{{shareTitle}}", "link": "{{url}}", "image_url": "{{imgURL}}", "type": "post", "post_id": "{{id}}", "pub_date": "{{publishDate}}", "section": "{{section}}", "author": ["{{authors}}"], "tags": ["{{keywords|join('","')|safe}}"]}' />
+
+<meta property="og:keywords" content="{{keywords|join(',')}}"/>
+
+<meta name="news_keywords" content="{{keywords|join(',')}}"/>
+{%endblock%}
+
+
+{%block custom_head%}
+{%endblock%}
+
+
+{%block ad%}
+<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript">
+DFP_networkId = "11222444";
+var DFPSlotSizes = [];
+if (jQuery(window).width() < 768)
+{
+var DFP_sitepage = "m.DMN/interactives";
+DFPSlotSizes = [320,50]
+var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop");
+adSlot0.setTargeting("position", "x01");
+adSlot0.addService(googletag.pubads());
+
+/*
+var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
+adSlot1.setTargeting("position", "x02");
+adSlot1.addService(googletag.pubads());
+*/
+
+/*
+var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
+adSlot2.setTargeting("position", "x03");
+adSlot2.addService(googletag.pubads());
+*/
+}
+else
+{
+var DFP_sitepage = "DMN/interactives";
+ DFPSlotSizes = [728,90]
+var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionTop");
+adSlot0.setTargeting("position", "Top");
+adSlot0.addService(googletag.pubads());
+
+/*
+var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
+adSlot1.setTargeting("position", "Top");
+adSlot1.addService(googletag.pubads());
+*/
+
+/*
+var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
+adSlot2.setTargeting("position", "Top");
+adSlot2.addService(googletag.pubads());
+*/
+ }
+</script>
+<script type="text/javascript">
+googletag.pubads().enableSingleRequest();
+googletag.pubads().enableSyncRendering();
+googletag.enableServices();
+</script>
+{%endblock%}
+
+
+{%block content%}
+
+
+<section class="content-well clearfix">
+
+	<header id="story-head">
+		<h1>Grading Texas Schools</h1>
+		<h2>See if your school gets an A or an F on Texas&rsquo; new report card</h2>
+	</header>
+		<!-- end storyHead -->
+
+    <div class="byline-block">
+        <p>By <a target="_blank" href="agiorgi@dallasnews.com">Ariana Giorgi</a> | Staff</p>
+        <p>Published January 9, 2017</p>
+        <!-- <p>Updated Month, Date, Year</p> -->
+    </div>
+    <!-- end bylineBlock -->
+
+
+
+	<div class="shareComments shareCommentsTop">
+		<ul id="share-bar1" class="width-auto-hack"></ul>
+	</div>
+	<!-- end shareComments -->
+
+    {%include "map-schools.html" %}
+
+
+    {%include "adblock1.html" %}
+
+
+
+    <p class="twitter-tag">Follow Ariana Giorgi on Twitter at <a href="https://twitter.com/ArianaNGiorgi">@ArianaNGiorgi</a>.</p>
+
+	<!-- end credits -->
+	<section class="more clearfix">
+		<h5>Read more from The Dallas Morning News</h5>
+		<a class="clearfix" href="http://interactives.dallasnews.com/2016/texan-of-the-year/">
+			<img src="images/_txoftheyearshare.jpg" alt="2016 Texan of the Year" />
+			<h6>2016 Texan of the Year</h6>
+			<p>Editorial: Federal District Judge Janis Graham Jack puts the needs of neglected children first</p>
+		</a>
+		<a class="clearfix" href="http://interactives.dallasnews.com/2016/where-do-democrats-go-from-here/">
+			<img src="images/_demshare.jpg" height='102' alt="Where do Texas Democrats go from here?" />
+			<h6>Where do Texas Democrats go from here?</h6>
+			<p>Statewide victory still out of reach</p>
+		</a>
+		<a class="clearfix" href="http://interactives.dallasnews.com/2016/hospital-wreckers/">
+			<img src="images/_bleddryshare.jpg" alt="Bled Dry" />
+			<h6>Bled Dry</h6>
+			<p>How a hospital died under the care of a Texas doctor</p>
+		</a>
+	</section>
+	<!-- end more -->
+
+
+</section>
+<!-- end contentWell -->
+{%endblock%}
+
+
+
+
+{%block custom_foot%}
+	<script type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.19.0/d3-legend.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+  <script src='https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js'></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src='js/loader.js'></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/map-schools.js"></script>
+{%endblock%}
+
+
+
+
+
+{%block custom_social_meta%}
+<script type="text/javascript">
+  var storyTitle = "{{tweetText}}", // headline in tweet card
+	storyURL = "{{url}}",
+	leadText = "{{shareText}}", //description in tweet card
+	storyIMG = "{{imgURL}}",
+	storyAuthor = "{{authors}}",
+	twitterTag = "{{sectionTwitter}}",
+	comments = true,
+	share = true;
+	OAS_sitepage = 'www.dallasnews.com/{{desk}}/{{section}}/';
+</script>
+{%endblock%}

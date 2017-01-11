@@ -1,0 +1,79 @@
+<div id='map-container' class='graphics'>
+
+  <p class="chatter">Texas is moving to a new system in 2018 that assigns public schools and districts grades from A-F based on how well they&rsquo;re educating kids, as determined mainly by test scores. This month, we got a preliminary look at &ldquo;what if&rdquo; grades: how districts and campuses would have performed if the standards were applied now. Here&rsquo;s a look at how they would have done:<br /><br />
+  <strong>Category I</strong>: How students score on state tests<br />
+  <strong>Category II</strong>: How much progress students made year to year<br />
+  <strong>Category III</strong>: How schools are closing the achievement gaps between poor students and their peers<br />
+  <strong>Category IV</strong>: How well schools are preparing students for college or careers</p>
+  <h4>School Search</h4>
+  <div id='mapcontrols'>
+    <select id="campusOrDistrict">
+        <option value='campuses' selected='selected'> Campus </option>
+        <option value='districts' > District </option>
+    </select>
+    <select id="categoryIndex">
+        <option value='1' selected='selected'> Category I </option>
+        <option value='2'> Category II </option>
+        <option value='3'> Category III </option>
+        <option value='4'> Category IV </option>
+    </select>
+    <select id="schoolType">
+        <option value='all' selected='selected'> All Schools </option>
+        <option value="E"> Elementary </option>
+        <option value='M'> Middle School </option>
+        <option value="H"> High School </option>
+        <option value='B'> Blended </option>
+    </select>
+    <select id="grade">
+        <option value="all"> All Grades </option>
+        <option value="A"> A </option>
+        <option value="B"> B </option>
+        <option value="C"> C </option>
+        <option value="D"> D </option>
+        <option value="F"> F </option>
+    </select>
+
+  </div>
+  <div id='mapwrap'>
+    <div id='legend'>
+      <svg id='legendScale'></svg>
+    </div>
+    <button class='int-btn' id='clearButton'>Reset Search</button>
+
+    <div id='map'></div>
+  </div>
+
+
+  <table id="schoolTable" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+            <th>Campus</th>
+            <th>District</th>
+            <th>School Level<span class='question' id='schoolInfo'>(?)</span></th>
+            <th>Category I</th>
+            <th>Category II</th>
+            <th>Category III</th>
+            <th>Category IV</th>
+            <th>2016 Rating<span class='question' id='ratingInfo'>(?)</span></th>
+            <th>% Low Income<span class='question' id='povertyInfo'>(?)</span></th>
+        </tr>
+      </thead>
+  </table>
+
+  <p class="sourceLine cutline" style='font-size:1.3rem;'>
+  * Charter School<br />
+  + Alternative School<br />
+  SOURCE: Texas Education Agency</p>
+
+  <div class='wide-block graphic'>
+    <h5>Related Coverage</h5>
+    <p><a href='http://www.dallasnews.com/news/education/2017/01/05/even-high-performing-schools-get-ds-fs-texas-new-grading-system'>Even high-performing schools get D&rsquo;s and F&rsquo;s in Texas&rsquo; new grading system</a></p>
+    <p><a href='http://www.dallasnews.com/news/education/2017/01/06/f-outrage-spurs-lawmakers-move-kill-texas-new-school-grading-plan'>A-F outrage spurs lawmaker&rsquo;s move to kill Texas&rsquo; new school grading plan</a></p>
+    <p><a href='http://www.dallasnews.com/news/education/2016/12/16/new-grading-system-near-texas-schools-mean'>A new grading system is near for Texas schools. But what does it mean?</a></p>
+    <p><a href='http://www.dallasnews.com/news/education/2016/12/13/dallas-area-school-districts-ask-texas-ditch-f-campus-grades'>Dallas-area school districts ask Texas to ditch A-F campus grades</a></p>
+    <p><a href='http://www.dallasnews.com/opinion/editorials/2017/01/06/grade-students-texas-campuses-take-f-heat'>Why grade students if Texas campuses can&rsquo;t take the A-F heat?</a></p>
+    <p><a href='http://www.dallasnews.com/news/education/2016/12/27/texas-sees-drop-failing-schools-least-one-measure'>Texas sees a drop in failing schools, at least by one measure</a></p>
+
+  </div>
+
+</div>

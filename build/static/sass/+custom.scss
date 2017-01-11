@@ -1,0 +1,250 @@
+//  _____           _                    _____ _         _
+// /  __ \         | |                  /  ___| |       | |
+// | /  \/_   _ ___| |_ ___  _ __ ___   \ `--.| |_ _   _| | ___  ___
+// | |   | | | / __| __/ _ \| '_ ` _ \   `--. \ __| | | | |/ _ \/ __|
+// | \__/\ |_| \__ \ || (_) | | | | | | /\__/ / |_| |_| | |  __/\__ \
+//  \____/\__,_|___/\__\___/|_| |_| |_| \____/ \__|\__, |_|\___||___/
+//                                                  __/ |
+//                                                 |___/
+
+@import 'variables';
+@import 'mixins';
+@import 'mapbox-gl';
+@import 'dataTables';
+@import 'qtip';
+
+.graphics {
+  font-family: $sans;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h4, p {
+    color: #4d4d4d;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    vertical-align: top;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  form {
+    font-size: 15px;
+  }
+
+  #schoolTable_wrapper{
+    margin-top: 24px;
+    font-size: 15px;
+  }
+  th{
+    font-size: 15px;
+    text-align: left;
+
+  }
+  td{
+    font-size: 12px;
+    // text-align: center;
+    line-height: 15px;
+  }
+  th,td{
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  .sorting{
+    min-width: 68px;
+  }
+
+  th:last-child, td:last-child{
+    text-align: right;
+  }
+}
+
+#map-container{
+  margin-top: 50px;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  font-size: 11pt;
+  line-height: 15px;
+  font-weight: normal;
+
+
+  .campus{
+    font-weight: bold;
+  }
+
+  p{
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 500px) {
+  #map {
+    height: 300px;
+  }
+}
+
+// @media (max-width: 750px) {
+//   #map {
+//     height: 500px;
+//   }
+// }
+
+#mapwrap{
+  position:relative;
+}
+
+#mapcontrols{
+  // position:absolute;
+  z-index: 10;
+  margin-bottom: 10px;
+  select{
+    font-size: 12px;
+  }
+}
+
+#legend{
+  position: absolute;
+  z-index: 10;
+  // background-color: white;
+  height:40px;
+  width: 170px;
+  font-weight: bold;
+
+  svg{
+    width: 170px;
+    height: 40px;
+  }
+}
+
+#clearButton{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+  margin-bottom: 0;
+  min-width: 1px;
+  width: 105px;
+  // height: 40px;
+  // background-color: $dmnblue;
+  // color:white;
+  // border: none;
+}
+
+
+.chatter, .filter {
+    max-width: 800px;
+    font-family: $sans;
+    @include type(1.4rem, 1.8rem, .6rem);
+}
+
+.wide-block {
+  display: block;
+  font-family: $sans;
+  h5{
+    font-weight: bold;
+  }
+}
+
+.question{
+  color: $dmnblue;
+  font-family: $sans;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.mapboxgl-ctrl-compass {
+display: none !important;
+}
+
+// #map-content {
+//     width: 100%;
+//     max-width: 1400px;
+//     margin: 2.4rem auto 2.4rem;
+//     position: relative;
+// }
+//
+// #map {
+//   width: 100%;
+//   height: 700px;
+// }
+//
+// #legend {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 100;
+//     padding: 10px;
+//     background-color: rgba(255,255,255,.9);
+//     width: 100%;
+//     max-width: 250px;
+//     font-family: $sans;
+//     h6 {
+//         font-weight: bold;
+//         @include type(1.2rem, 1.5rem, .7rem);
+//         &:nth-of-type(n+2) {
+//             margin-top: 1.2rem;
+//         }
+//     }
+//     ul {
+//         width: 100%;
+//         li {
+//             width: 20%;
+//             display: inline-block;
+//             border-top: 15px solid red;
+//             margin: 0 0;
+//             padding: 0 0;
+//             float: left;
+//             text-align: center;
+//             font-size: 1.1rem;
+//             line-height: 1.5rem;
+//             color: $black121;
+//             &:nth-child(1) {
+//                 border-top: 15px solid #4575b4;
+//             }
+//             &:nth-child(2) {
+//                 border-top: 15px solid #74add1;
+//             }
+//             &:nth-child(3) {
+//                 border-top: 15px solid #fdae61;
+//             }
+//             &:nth-child(4) {
+//                 border-top: 15px solid #f46d43;
+//             }
+//             &:nth-child(5) {
+//                 border-top: 15px solid #d73027;
+//             }
+//         }
+//     }
+//     @media (max-width: 500px) {
+//         position: relative;
+//         top: auto;
+//         left: auto;
+//         padding: 10px 10px 10px 0;
+//     }
+// }
+//
+// @media (max-width: 750px) {
+//   #map {
+//     height: 500px;
+//   }
+// }
+//
+// @media (max-width: 500px) {
+//   #map {
+//     height: 300px;
+//   }
+// }
