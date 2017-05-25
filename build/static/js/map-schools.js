@@ -5,7 +5,7 @@
     container: 'map',
     center: [-96.9785, 32.8924],
     zoom: 9,
-    style: 'http://maps.dallasnews.com/styles.json'
+    style: '//maps.dallasnews.com/styles.json'
   });
 
   //color grading scale

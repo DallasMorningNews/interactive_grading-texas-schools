@@ -50,12 +50,13 @@ body {
   position: relative;
   min-height: 100%;
   display: block;
-  padding-bottom: 200px;
+  padding-bottom: 200px !important;
+  height: auto !important;
   @media (max-width: 650px) {
-      padding-bottom: 225px;
+      padding-bottom: 225px !important;
   }
   @media (max-width: 450px) {
-      padding-bottom: 250px;
+      padding-bottom: 250px !important;
   }
 }
 ol, ul {
@@ -114,7 +115,7 @@ II. KASON TEMPLATE STYLES, HEADER AND FOOTER
 }
 
 .logo {
-  background-image: url('http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/_dmn_logo.svg');
+  background-image: url('//interactives.dallasnews.com/common/templates/v1.0/images/_dmn_logo.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: left center;
@@ -176,14 +177,14 @@ II. KASON TEMPLATE STYLES, HEADER AND FOOTER
         cursor: pointer;
     }
     #footer-facebook, #footer-twitter {
-        background: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/socialSprites.svg");
+        background: url("//interactives.dallasnews.com/common/templates/v1.0/images/socialSprites.svg");
         background-size: 120px 60px;
     }
     #footer-twitter {
         background-position: 90px 0px;
     }
     #footer-instagram, #footer-youtube {
-        background: url("http://interactives.templates.statics.s3.amazonaws.com/v1.0/images/socialSprites2.svg");
+        background: url("//interactives.dallasnews.com/common/templates/v1.0/images/socialSprites2.svg");
         background-size: 60px 60px;
     }
     #footer-youtube {
